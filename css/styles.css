@@ -7,6 +7,13 @@
     --color-body: #918ca4;
 }
 
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+
 /* Typography */
 
 html
@@ -210,4 +217,107 @@ a
     display: inline-flex;      /* If we remove this then our container will not be a circle because span is an inline element and we have use flex so that pur icon can come in the center of it with further step*/
     justify-content: center;
     align-items: center;
+}
+
+
+/* BUTTONS */
+
+.btn
+{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 2rem 3rem;
+    border: 0;  /* To remove the border that browser automatically displays */
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin: 1rem 0;
+    white-space: nowrap;
+}
+
+.btn--primary
+{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover
+{
+    background-color: #3a8ffe;      /* We can use lighten function that will lighten the color by percentage you will set as lighten(primary,10%) */
+}
+
+.btn--secondary
+{
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.btn--secondary:hover
+{
+    background-color: #00c8eb;
+}
+
+.btn--accent
+{
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.btn--accent:hover
+{
+    background-color: #ec3000;
+}
+
+.btn-block
+{
+    width: 100%;
+    display: inline-block;
+}
+
+.btn--outline
+{
+    background-color: #fff;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover
+{
+    background-color: var(--color-headings);
+    color: #fff;
+}
+
+@media screen and (min-width:1024px) 
+{
+    .btn
+    {
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* Inputs */
+
+.input
+{
+    padding: 1.5rem 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: 0;
+    color: var(--color-headings);
+    font-size: 2rem;
+}
+
+::placeholder
+{
+    color: #cdcbd7;
+}
+
+@media screen and (min-width:1024px) 
+{
+    .input
+    {
+        font-size: 1.5rem;
+    }
 }
