@@ -186,3 +186,28 @@ a
     }
     
 }
+
+
+/* Icon */
+
+.icon
+{
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary
+{
+    fill: var(--color-primary); /* This only works for svg format icons */
+}
+
+.icon-container
+{
+    background-color: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;      /* If we remove this then our container will not be a circle because span is an inline element and we have use flex so that pur icon can come in the center of it with further step*/
+    justify-content: center;
+    align-items: center;
+}
