@@ -376,7 +376,7 @@ a
 }
 
 
-/* Plans (Elements inside the card) */
+/* Plans (Components inside the card, which tells that it is a plan selecting card) */
 
 .plan__name
 {
@@ -411,6 +411,22 @@ a
 {
     margin-bottom: 2rem;
     letter-spacing: 0.1rem;
+}
+
+.plan--popular .card__header
+{
+    position: relative;
+}
+
+.plan--popular .card__header::before
+{
+    content: url(../images/Price-Tag_2.svg);
+    color: var(--color-headings);
+    width: 4rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 5%;
 }
 
 @media screen and (min-width:1024px) 
