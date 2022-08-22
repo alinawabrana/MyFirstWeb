@@ -208,9 +208,20 @@ a
     height: 40px;
 }
 
+.icon--small
+{
+    width: 30px;
+    height: 30px;
+}
+
 .icon--primary
 {
     fill: var(--color-primary); /* This only works for svg format icons */
+}
+
+.icon--white
+{
+    fill: #fff;
 }
 
 .icon-container
@@ -222,6 +233,11 @@ a
     display: inline-flex;      /* If we remove this then our container will not be a circle because span is an inline element and we have use flex so that pur icon can come in the center of it with further step*/
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent
+{
+    background-color: var(--color-accent);
 }
 
 
@@ -560,4 +576,51 @@ a
     {
         grid-template-columns: repeat(3, 1fr);
     }   
+}
+
+
+/* Testimonial */
+
+.testimonial
+{
+    padding: 3rem;
+}
+
+.testimonial__image-container
+{
+    position: relative;
+}
+
+.testimonial__image
+{
+    width: 100%;
+}
+
+.testimonial__image-container > .icon-container
+{
+    position: absolute;
+    top: 3rem;
+    right: -32px;       /* We have given the value which is half the value of the width of the icon to give it an offset. Also we have given negative value so that icon can become at the center of the image border or we can use left with a +ve value */
+}
+
+@media screen and (min-width: 768px) 
+{
+    .testimonial .quote, 
+    .testimonial .quote__author
+    {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote
+    {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (max-width:768px) 
+{
+    .testimonial
+    {
+        overflow: visible;
+    }
 }
