@@ -18,20 +18,27 @@
   </head>
 
   <body>
-    <div class="media">
-      <div class="media__image">
-        <svg class="icon icon--primary">
-          <use xlink:href="images/sprite.svg#snap"></use>
-        </svg>
-      </div>
-      <div class="media__body">
-        <h3 class="media__title">Easy Start & Managed Updates</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sed
-          corporis sit maxime vel distinctio cupiditate harum aliquam hic
-          doloremque.
-        </p>
-      </div>
-    </div>
+    <!-- We can either use q element which is inline element or blockquote element which is block element -->
+    <blockquote class="quote">
+      <p class="quote__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        maxime.
+      </p>
+      <footer>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon--primary quote__line">
+              <use xlink:href="images/sprite.svg#line"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title quote__author">Jhone Lumeo</h3>
+            <p class="quote__organization">
+              Mosh Company ceo
+            </p>
+          </div>
+        </div>
+      </footer>
+    </blockquote>
   </body>
 </html>
