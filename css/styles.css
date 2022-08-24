@@ -331,7 +331,6 @@ a
     {
         font-size: 1.5rem;
     }
-    
 }
 
 /* Inputs + Button inisde Input*/
@@ -385,6 +384,7 @@ a
     border-radius: 7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
     overflow: hidden;
+    height: 100%;
 }
 
 .card__header, .card__body
@@ -404,6 +404,11 @@ a
     color: #fff;
 }
 
+.card--primary .badge--primary
+{
+    background-color: #126de4;
+}
+
 .card--secondary .badge--secondary
 {
     background-color: #02cdf1;
@@ -411,6 +416,11 @@ a
 
 
 /* Plans (Components inside the card, which tells that it is a plan selecting card) */
+
+.plan
+{
+    transition: transform 0.2s ease-out;
+}
 
 .plan__name
 {
@@ -447,6 +457,11 @@ a
     letter-spacing: 0.1rem;
 }
 
+.plan--popular
+{
+    transform: scale(1.1);
+}
+
 .plan--popular .card__header
 {
     position: relative;
@@ -461,6 +476,16 @@ a
     position: absolute;
     top: 0;
     right: 5%;
+}
+
+.plan:hover
+{
+    transform: scale(1.05);
+}
+
+.plan--popular:hover
+{
+    transform: scale(1.15);
 }
 
 @media screen and (min-width:1024px) 
@@ -925,4 +950,18 @@ a
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));   /* auto-fit is used so that if in future we want to increase or decrease the list item then we should not get any issue */
         /* minmax function is used to set the min and max value so that our columns should take space neede fot the list etc */
     }
+}
+
+
+/* PLans Block */
+
+.block-plan .grid
+{
+    gap: 8rem 4rem;
+}
+
+.block-plan .card
+{
+    max-width: 500px;
+    margin: 0 auto;
 }
