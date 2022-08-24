@@ -223,7 +223,7 @@ a
 
 .icon--primary
 {
-    fill: var(--color-primary); /* This only works for svg format icons */
+    fill: var(--color-primary); /* TODO: This only works for svg format icons */
 }
 
 .icon--secondary
@@ -247,7 +247,7 @@ a
     width: 64px;
     height: 64px;
     border-radius: 100%;
-    display: inline-flex;      /* If we remove this then our container will not be a circle because span is an inline element and we have use flex so that pur icon can come in the center of it with further step*/
+    display: inline-flex;      /* TODO: If we remove this then our container will not be a circle because span is an inline element and we have use flex so that pur icon can come in the center of it with further step*/
     justify-content: center;
     align-items: center;
 }
@@ -266,7 +266,7 @@ a
     font-weight: 600;
     text-transform: uppercase;
     padding: 2rem 3rem;
-    border: 0;  /* To remove the border that browser automatically displays */
+    border: 0;  /* TODO: To remove the border that browser automatically displays */
     border-radius: 40px;
     text-align: center;
     cursor: pointer;
@@ -291,7 +291,7 @@ a
 
 .btn--primary:hover
 {
-    background-color: #3a8ffe;      /* We can use lighten function that will lighten the color by percentage you will set as lighten(primary,10%) */
+    background-color: #3a8ffe;      /* TODO: We can use lighten function that will lighten the color by percentage you will set as lighten(primary,10%) */
 }
 
 .btn--secondary
@@ -370,13 +370,13 @@ a
 {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    display: flex;      /* This is done so thta our button should get at the end of the div or you can say that input field */
+    display: flex;      /* TODO: This is done so thta our button should get at the end of the div or you can say that input field */
 }
 
 .input-group .input
 {
     border: 0;
-    flex-grow: 1;   /* This will make the input field to grow and take the all available space in the div */
+    flex-grow: 1;   /* TODO: This will make the input field to grow and take the all available space in the div */
     padding: 1.5rem 2rem;
 }
 
@@ -455,7 +455,7 @@ a
 {
     font-size: 2.4rem;
     font-weight: 300;
-    opacity: 0.8;   /* 0.8 = 80%, You can see this by selecting the text in photoshop and by going at the window->layers */
+    opacity: 0.8;   /* TODO: 0.8 = 80%, You can see this by selecting the text in photoshop and by going at the window->layers */
     margin: 1rem;
 }
 
@@ -564,7 +564,7 @@ a
 
 .quote__text::before
 {
-    content: open-quote;        /* This is in-built style */
+    content: open-quote;        /* TODO: This is in-built style */
 }
 
 .quote__text::after
@@ -658,7 +658,7 @@ a
 {
     position: absolute;
     top: 3rem;
-    right: -32px;       /* We have given the value which is half the value of the width of the icon to give it an offset. Also we have given negative value so that icon can become at the center of the image border or we can use left with a +ve value */
+    right: -32px;       /* TODO: We have given the value which is half the value of the width of the icon to give it an offset. Also we have given negative value so that icon can become at the center of the image border or we can use left with a +ve value */
 }
 
 @media screen and (min-width: 768px) 
@@ -707,8 +707,8 @@ a
 
 .callout .btn
 {
-    justify-self: center;       /* Justify self property is used to align component inside grid horizontally wrt grid */
-    align-self: center;         /* align self property is used to align component inside grid vertically wrt grid */
+    justify-self: center;       /* TODO: Justify self property is used to align component inside grid horizontally wrt grid */
+    align-self: center;         /* TODO: align self property is used to align component inside grid vertically wrt grid */
 }
 
 .callout__content
@@ -720,7 +720,7 @@ a
 {
     .callout .grid--1x2
     {
-        grid-template-columns: 1fr auto;        /* This is usd if we want that our second column should obly take the space of the container and not the 1 fraction */
+        grid-template-columns: 1fr auto;        /* TODO: This is usd if we want that our second column should obly take the space of the container and not the 1 fraction */
     }
 
     .callout__content
@@ -760,7 +760,7 @@ a
 {
     /* display: none; */
 
-    max-height: 0;      /* We are using max-height instead of display to make animation */
+    max-height: 0;      /* TODO: We are using max-height instead of display to make animation */
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.3s, opacity 0.3s;
@@ -963,7 +963,7 @@ a
     .block-domain__prices
     {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));   /* auto-fit is used so that if in future we want to increase or decrease the list item then we should not get any issue */
-        /* minmax function is used to set the min and max value so that our columns should take space neede fot the list etc */
+        /* TODO: minmax function is used to set the min and max value so that our columns should take space neede fot the list etc */
     }
 }
 
@@ -1007,7 +1007,7 @@ a
 
 @media screen and (min-width: 768px) 
 {
-    .feature:nth-of-type(even) .feature__content        /* This is used to change the order of the content inside the grid for every even content inside the container/grid */
+    .feature:nth-of-type(even) .feature__content        /* TODO: This is used to change the order of the content inside the grid for every even content inside the container/grid */
     {
         order: 2;
     }
@@ -1035,7 +1035,105 @@ a
 
     .showcase__image > img
     {
-        width: auto;        /* This is done so that the image should not increse/decrease more then it`s original length */
+        width: auto;        /* TODO: This is done so that the image should not increse/decrease more then it`s original length */
         max-width: 700px;
+    }
+}
+
+
+/* Footer */
+
+.footer
+{
+    background-color: #232323;
+}
+
+.footer a
+{
+    color: #777;
+    transition: color 0.3s;
+}
+
+.footer a:hover
+{
+    color: #fff;
+}
+
+.footer__section
+{
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+}
+
+.footer__section .list
+{
+    margin: 0;
+}
+
+.footer__heading
+{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__brand
+{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__brand img
+{
+    /* TODO: consider refactoring this and applying it to all images. */
+    width: 100%;
+    max-width: 230px;
+}
+
+.footer__copyright
+{
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: .3;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) 
+{
+    .footer__sections
+    {
+        grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    }
+
+    .footer .collapsible__chevron
+    {
+        display: none;
+    }
+
+    .footer .collapsible__content
+    {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand
+    {
+        order: -1;
+        margin-top: 1rem;
+    }
+
+    .footer__copyright
+    {
+        font-size: 1.5rem;
+    }
+
+    .footer__section
+    {
+        border: 0;
+    }
+
+    .footer__heading
+    {
+        font-size: 1.6rem;
     }
 }
