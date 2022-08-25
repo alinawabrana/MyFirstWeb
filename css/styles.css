@@ -265,7 +265,7 @@ a
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     border: 0;  /* TODO: To remove the border that browser automatically displays */
     border-radius: 40px;
     text-align: center;
@@ -378,6 +378,7 @@ a
     border: 0;
     flex-grow: 1;   /* TODO: This will make the input field to grow and take the all available space in the div */
     padding: 1.5rem 2rem;
+    width: 0;       /* TODO: This is done so that our input should never increase from the size of container */
 }
 
 .input-group .btn
@@ -948,14 +949,23 @@ a
 
 .block-domain__prices
 {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
     max-width: 700px;
     margin: 0 auto;
+}
+
+@media screen and (min-width:550px) 
+{
+    .block-domain__prices
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (min-width: 768px) 
@@ -1046,6 +1056,7 @@ a
 .footer
 {
     background-color: #232323;
+    padding-top: 10rem;
 }
 
 .footer a
@@ -1074,6 +1085,8 @@ a
 {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
 
 .footer__brand
@@ -1094,12 +1107,17 @@ a
     font-size: 2.1rem;
     color: #fff;
     opacity: .3;
-    margin-top: 5rem;
+    margin-top: 0.5rem;
     text-align: center;
 }
 
 @media screen and (min-width: 768px) 
 {
+    .footer
+    {
+        font-size: 1.5rem;
+    }
+
     .footer__sections
     {
         grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
@@ -1136,4 +1154,15 @@ a
     {
         font-size: 1.6rem;
     }
+
+    .footer .list
+    {
+        line-height: 2rem;
+    }
 }
+
+
+/* Sign-up Callout */
+.callout-signup {
+    transform: translateY(5rem);
+  }
